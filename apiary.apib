@@ -2410,11 +2410,8 @@ Customer's personal document
 + `isRead`: `True` (boolean) - Flag indicating that user has seen the notification.
 + `isTriggered`: `True` (boolean) - Flag indicating that user has interacted with the notification (e.g. clicked/tapped on it)
 + `slug`: `order-cancelled` (string, optional) - Notification template slug.
-+ `relatedData`: (NotificationRelatedDataObject, optional) - Related objects.
++ `relatedData`: (RelatedDataObject, optional) - Related objects.
 
-## NotificationRelatedDataObject (object)
-+ `application` (Application, optional) - Related application.
-+ `externalPromocodeOfferPurchasedKey` (PurchasedPartnerPromocodeOffer, optional, nullable) - customer purchased external promocode key with offer info
 
 ## PushNotificationDeviceToken (object)
 Customer's device for receiving push notifications.
@@ -2465,7 +2462,7 @@ Customer's coin account overview. Is based on CoinAmount object.
 ### Properties
 + `coinBalance`: 12500 (CoinAmount, required) - Amount in minor units (12500 represents 125 coins/units)
 
-## CoinRelatedData (object)
+## RelatedDataObject (object)
 ### Properties
 + application (Application, optional, nullable) - Application containing order whose payment created transaction
 + externalPromocodeOfferPurchasedKey (PurchasedPartnerPromocodeOffer, optional, nullable) - customer purchased external promocode key with offer info
@@ -2482,4 +2479,4 @@ Detail of customer's Mall Coin transaction
     + `DELIVERY_DISCOUNT` - Coins were spent on delivery discount
     + `VOUCHER_ACQUISITION` - Coins were spent on voucher acquisition
     + `CUSTOMER_COMPENSATION` - Coins were received as customer compensation
-+ `relatedData` (CoinRelatedData, optional, nullable) - data and objects related to the MALL Coin transaction
++ `relatedData` (RelatedDataObject, optional, nullable) - data and objects related to the MALL Coin transaction
